@@ -54,15 +54,7 @@ div#d4 {
 	text-align: center;
 }
 
-div#d5  {
-  width: 150px;
-  border-radius: 50%;
 }
-
-
-}
-
-
 
 
 </style>
@@ -71,7 +63,7 @@ div#d5  {
 	function lw() {
 	var i = document.getElementById("in1").value
 	var xhr = new  XMLHttpRequest();
-	xhr.open("GET","http://192.168.1.4/sar.py?x=" + i,true);
+	xhr.open("GET","http://192.168.1.4/cgi-bin/sar.py?x=" + i,true);
 	xhr.send();
 	
 	xhr.onload = function() {
@@ -89,10 +81,8 @@ div#d5  {
 
 <div id="d3"><button onclick="lw()">Enter</button></div>
 
-<div id="d4">
-<div id="d5">
+<div id="d4"style="text-align: center;">
 <img src="sar.jpg" alt="Avatar man">
-</div>
 <h2>Sarthak Srivastava</h2>
 <p>👦This is Sarthak Srivastava pursuing Btech from IIIT Ranchi bought and did schooling from Allahabad . My field of interest are Machine Learning,Natural Language Processing, Computer Vision,Model Deployment,Devops,Big Data Tools and have good command over it..</p>
 </div>
