@@ -1,0 +1,100 @@
+<style>
+
+
+div#d1 {
+	border: 5px solid DarkSalmon;
+	height: 10%;
+	width: 50%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	overflow-x: hidden;
+  	padding-top: 20px;
+  	left: 0;
+  	background-color: DarkSalmon;
+}
+div#d2 {
+        border: 5px  blue;
+	height: 100%;
+  	width: 50%;
+  	position: fixed;
+  	z-index: 1;
+  	top: 0;
+  	overflow-x: hidden;
+  	padding-top: 20px;
+	right: 0;
+	background-color: LightCoral;
+}
+
+div#d3 {
+	border: 5px ;
+	height: 5%;
+	width: 50%;
+	position: fixed;
+	z-index: 1;
+	top: 90;
+	overflow-x: hidden;
+	left: 0;
+  	padding-top: 10px;
+	background-color:IndianRed;
+}
+
+div#d4 {
+	border: 5px ;
+	height: 100%;
+	width: 50%;
+	position: fixed;
+	z-index: 1;
+	top: 125;
+	overflow-x: hidden;
+	left: 0;
+  	padding-top: 10px;
+	background-color:LightSalmon;
+	position: absolute;
+	text-align: center;
+}
+
+div#d5  {
+  width: 150px;
+  border-radius: 50%;
+}
+
+
+}
+
+
+
+
+</style>
+
+<script>
+	function lw() {
+	var i = document.getElementById("in1").value
+	var xhr = new  XMLHttpRequest();
+	xhr.open("GET","http://192.168.1.4/sar.py?x=" + i,true);
+	xhr.send();
+	
+	xhr.onload = function() {
+	var o = xhr.responseText;
+	document.getElementById("d2").innerHTML = o;
+	}
+	}
+</script>
+
+<div id="d1"> [root@localhost ~]#    <input id="in1"></div>
+
+<pre>
+<div id="d2">Output............... </div>
+</pre>
+
+<div id="d3"><button onclick="lw()">Enter</button></div>
+
+<div id="d4">
+<div id="d5">
+<img src="sar.jpg" alt="Avatar man">
+</div>
+<h2>Sarthak Srivastava</h2>
+<p>👦This is Sarthak Srivastava pursuing Btech from IIIT Ranchi bought and did schooling from Allahabad . My field of interest are Machine Learning,Natural Language Processing, Computer Vision,Model Deployment,Devops,Big Data Tools and have good command over it..</p>
+</div>
+
+
